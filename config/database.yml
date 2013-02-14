@@ -1,0 +1,53 @@
+# development:
+#   adapter: sqlserver
+#   dsn: mydsn
+#   mode: odbc
+#   database: meugwcel_development
+#   username: sa	
+#   password: pronto0101
+  
+# production:
+#   adapter: sqlserver
+#   dsn: mydsn
+#   mode: odbc
+#   database: meugwcel_production
+#   username: sa	
+#   password: pronto0101
+  
+# test:
+#   adapter: sqlserver
+#   dsn: mydsn
+#   mode: odbc
+#   database: meugwcel_test
+#   username: sa	
+#   password: pronto0101
+
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: meugwcel_development
+  pool: 5
+  username: root
+  password: mj915077
+  host: localhost
+
+test:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: meugwcel_test
+  pool: 5
+  username: root
+  password: mj915077
+  host: localhost
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: meugwcel_production
+  pool: 5
+  username: root
+  password: mj915077
+  host: localhost

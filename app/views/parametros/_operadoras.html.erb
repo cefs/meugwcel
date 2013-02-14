@@ -1,0 +1,58 @@
+<style>
+	label{border-style:none;cursor:pointer;padding:5px;font-size:10px}
+	label b {font-size:12px}
+</style>
+
+<%=form_tag('/parametros') do %>
+	<br />
+	<b>VGP</b>: <%=select "vgp","codigo",["00000001","00000002","00000003","00000004"] %>
+
+	<table class="table">
+		<tr>
+			<td><a href="#" class="icon-check"></a></td>
+			<td>nome</td>
+			<td></td>
+			<td></td>
+		</tr>
+
+		<% @operadoras.each do |operadora| %>
+			<tr class="operadora_id">
+				<td>
+					<label for='<%="operadora_#{operadora.id}"%>' >
+						<%=check_box_tag 'operadora[]', operadora.id, false,:id =>"operadora_#{operadora.id}" %>
+					</label>
+				</td>
+				<td>
+				<label for='<%="operadora_#{operadora.id}"%>' >
+					<b><%=operadora.nome%></b>
+				</label>
+				</td>
+				<td></td>
+				<td></td>
+			</tr>
+			
+			<%operadora.filiais.each do |filial| %>
+				<tr class="toggleFiliais" id='<%="#{operadora.id}"%>' >					
+				
+						<td>
+							
+						</td>
+				
+						<td>
+							<label for='<%="filial_#{filial.id}"%>' >
+								<%=check_box_tag 'filial[]', filial.id, false, :id =>"filial_#{filial.id}" %>
+								<%=filial.nome %>
+							</label>
+						</td>
+						
+						<td>
+							<%= select_tag("vfps[#{filial.id}]", options_for_select(['10000000', '20000000', '30000000']),:id =>"#{filial.id}") %>
+						</td>
+				</tr>
+			<% end %>
+
+		<% end %>
+	</table>
+
+	<%=button_tag('Gerar string',:class=>"btn btn-success")%>
+<% end %>

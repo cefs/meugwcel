@@ -1,0 +1,35 @@
+<%= form_for(@filial,:html => {:class =>"well form-vertical"}) do |f| %>
+
+  <% if @filial.errors.any? %>
+    <div id="error_explanation">
+    <h2><%= pluralize(@filial.errors.count, t(:error)) %>:</h2>
+      <ul>
+      <% @filial.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :operadora_id %>
+    <%= f.collection_select :operadora_id,
+				Operadora.order(:nome),
+				:id,
+				:nome,
+				{:prompt =>true}
+    %>
+  </div>
+  <div class="field">
+    <%= f.label :codigo %>
+    <%= f.text_field :codigo %>
+  </div>
+  <div class="field">
+    <%= f.label :nome %>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="actions">
+    <%= f.submit t(:submit),:class =>"btn btn-success" %> | <%= link_to t(:back), filiais_path, :class =>"btn btn" %>
+  </div>
+  
+<% end %>

@@ -1,0 +1,32 @@
+<h1><%=t(:list_affiliates)%></h1>
+
+<table class="table">
+  <tr>
+    <th>Código</th>
+    <th>Filial</th>
+    <th>Operadora</th>
+
+    <th></th>  
+    <th>Ações</th>
+    <th></th>
+  </tr>
+
+<% @filiais.each do |filial| %>
+  <tr>
+    <td><%= filial.codigo %></td>
+    <td><%= filial.nome %></td>
+
+    
+    <td><%= filial.operadora.nome %></td>
+    
+
+    <td><%= link_to t(:show), filial,:class=>"btn btn-info" %></td>
+    <td><%= link_to t(:edit), edit_filial_path(filial),:class=>"btn btn-warning" %></td>
+    <td><%= link_to t(:destroy), filial, confirm: 'Are you sure?', method: :delete,:class=>"btn btn-danger" %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to t(:new), new_filial_path, :class=>"btn btn-primary" %>

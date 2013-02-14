@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Operadora:</b>
+  <%= @filial.operadora.id %>
+</p>
+
+<p>
+  <b>Codigo:</b>
+  <%= @filial.codigo %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%= @filial.nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_filial_path(@filial) %> |
+<%= link_to 'Back', filiais_path %>

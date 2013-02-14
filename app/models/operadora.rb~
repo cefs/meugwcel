@@ -1,0 +1,5 @@
+class Operadora < ActiveRecord::Base
+	attr_accessible :codigo, :nome
+
+	has_many :filiais
+end

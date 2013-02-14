@@ -1,0 +1,34 @@
+<%= form_for(@filial) do |f| %>
+  <% if @filial.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@filial.errors.count, "error") %> prohibited this filial from being saved:</h2>
+
+      <ul>
+      <% @filial.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :operadora_id %>:<br />
+    <%= f.collection_select :operadora_id,
+				Operadora.all,
+				:id,
+				:nome,
+				{:prompt =>true}
+    %>
+  </div>
+  <div class="field">
+    <%= f.label :codigo %><br />
+    <%= f.text_field :codigo %>
+  </div>
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

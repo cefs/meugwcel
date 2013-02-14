@@ -1,0 +1,27 @@
+<h1>Listing filiais</h1>
+
+<table>
+  <tr>
+    <th>Operadora</th>
+    <th>Codigo</th>
+    <th>Nome</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @filiais.each do |filial| %>
+  <tr>
+    <td><%= filial.operadora.id %></td>
+    <td><%= filial.codigo %></td>
+    <td><%= filial.nome %></td>
+    <td><%= link_to 'Show', filial %></td>
+    <td><%= link_to 'Edit', edit_filial_path(filial) %></td>
+    <td><%= link_to 'Destroy', filial, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Filial', new_filial_path %>

@@ -1,0 +1,21 @@
+<h1><%= t(:details)%></h1>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Operadora:</b>
+  <%= @filial.operadora.nome %>
+</p>
+
+<p>
+  <b>Codigo:</b>
+  <%= @filial.codigo %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%= @filial.nome %>
+</p>
+
+
+<%= link_to t(:edit), edit_filial_path(@filial),:class =>"btn btn-warning" %> | <%= link_to t(:back), filiais_path,:class=>"btn btn" %>

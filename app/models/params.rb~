@@ -1,0 +1,3 @@
+class Params
+	attr_accessible :id
+end

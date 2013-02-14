@@ -1,0 +1,37 @@
+<a href="#" id="mostrarfiliaischecadas">Mostrar filiais checadas</a>
+<%=	form_tag('/passo3',:method =>'get') do%>
+
+	<%=text_field_tag :checados %>
+
+	<table>
+
+		<tr>
+
+				<th>[x]</th>
+				<th>id</th>
+				<th>código</th>
+				<th>nome</th>
+
+		</tr>
+
+			<%@checados.each do |item| %>
+				
+					<% Operadora.find(item).filiais.each do |filial| %>
+
+						<tr>
+							<td><%=check_box_tag 'filial_id', filial.id, false %></td>
+							<td><%=filial.id%></td>
+							<td><%=filial.codigo%></td>
+							<td><%=filial.nome%></td>
+							<td><%=filial.nome%></td>
+						</tr>
+
+					<% end %>
+				
+			<% end %>
+			
+	</table>
+
+	<%=submit_tag('Passo 3') %>
+
+<% end %>

@@ -1,0 +1,17 @@
+<h1><%= t(:details)%></h1>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Codigo:</b>
+  <%= @tipo.codigo %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%= @tipo.nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_tipo_path(@tipo) %> |
+<%= link_to 'Back', tipos_path %>

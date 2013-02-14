@@ -1,0 +1,18 @@
+require "spec_helper"
+
+describe Params,"assignment" do
+	subject { Params.new }
+
+	it "id of the operator with three digits" do
+		subject.id = 111
+		subject.id.to_s.size.should eql(3)
+	end
+
+	it "type of operator" do
+		subject.id = 11
+	end
+
+	it "tam of name operator"
+	it "name of operator"
+	it "amount of branchs"
+end

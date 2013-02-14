@@ -1,0 +1,19 @@
+<h1><%= t(:details)%></h1>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Codigo:</b>
+  <%=@operadora.codigo %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%=@operadora.tipo.nome %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_operadora_path(@operadora) %> |
+<%= link_to 'Back', operadoras_path %>

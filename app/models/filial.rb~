@@ -1,0 +1,6 @@
+class Filial < ActiveRecord::Base
+	attr_accessible :operadora_id, :codigo, :nome
+
+
+	belongs_to :operadora
+end

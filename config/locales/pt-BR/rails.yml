@@ -1,0 +1,23 @@
+pt-BR:
+  list_affiliates: "Filiais"
+  list_operators: "Operadoras"
+  list_types: "Tipos"
+  list_query_parameters: "Consulta parâmetros"
+
+  new: "Inserir um novo"
+  show: "Detalhar"
+  destroy: "Deletar"
+  edit: "Editar"
+  submit: "Concluir Operação"
+  back : "Retornar"
+
+  new_operator:  "Nova operadora"
+  new_affiliate: "Nova filial"
+  new_type:      "Novo tipo"
+
+  correct_the_following_fields: "Corrigir os seguintes campos:"
+  error: "Erro"
+  details: "Detalhes"
+  please_select: "Selecione"
+
+

@@ -1,0 +1,72 @@
+<style>
+	.string{
+		white-space:normal;
+		text-align:left;
+	}
+</style>
+
+<h2>V005</h2>
+<table class="table">
+	<tr>
+		<td>TAMANHO</td>
+		<td>(8)</td>
+		<td>(3)</td>
+		<td>(3)</td>
+		<td>(2)</td>
+		<td>(2)</td>
+		<td>(TNC)</td>
+		<td>(3)</td>
+		<td>(11)</td>
+		<td>(8)</td>
+		<td>(2)</td>
+		<td>(TNF)</td>
+	</tr>
+
+	<tr>
+		<td>CAMPO</td>
+		<td>VGP</td>
+		<td>QTD. Concess.</td>
+		<td>ID Concess.</td>
+		<td style="backgroun-color:yellow">Tipo Concess.</td>
+		<td>TamNomeConcess.</td>
+		<td>NomeConcess.</td>
+		<td>QtdeFiliais</td>
+		<td>CodFilial</td>	
+		<td>VFP</td>
+		<td>TamNomeFilial</td>
+		<td>NomeFilial</td>
+	</tr>
+
+	<tr>
+		<td>EXEMPLO</td>
+		<td>00000268</td>
+		<td>014</td>
+		<td>001</td>
+		<td>01</td>
+		<td>04</td>
+		<td>vivo</td>
+		<td>025</td>
+		<td>00201000000</td>
+		<td>00000004</td>
+		<td>07</td>
+		<td>Vivo MG</td>
+	</tr>
+
+</table>
+
+<div class="string">
+	<%=consultav005_helper(@operadoras,@filial_ids,@vgp,@vfps) %>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
